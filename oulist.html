@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>OU lists</title>
+    <style>
+        .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a237e;
+    padding: 8px; /* Reduced from 15px */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+.header a {
+    text-decoration: none;
+    color: white;
+    margin: 4px 8px; /* Reduced margins */
+    padding: 6px 10px; /* Reduced padding */
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem; /* Added font size */
+    white-space: nowrap;
+}
+
+        .logo-gif {
+    width: 8vw;
+    height: 8vh;
+    margin-left: 1vw;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.nav-menu {
+    margin-left: 0.5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+        body {
+            padding-top: 60px;
+            margin: 0;
+            background-color: #1a237e;
+        }
+        .content-container {
+            background-color: #ffffff;  
+            margin: 60px auto;
+            padding: 20px;
+            width: 90%;
+            border-radius: 8px;
+           
+        }
+        @media (max-width: 768px) {
+            .header {
+        padding: 5px;
+    }
+    .logo-gif {
+        width: 15vw;
+        height: 15vh;
+    }
+    .nav-menu {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .header a {
+        font-size: 0.8rem;
+        margin: 2px 4px;
+        padding: 4px 8px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.gif" alt="Logo" class="logo-gif">
+        <div class="nav-menu">
+            <a href="index.html">Home</a> 
+            <a href="timetable.html">Timetable</a> 
+            <a href="imagegallery.html">Image Gallery</a> 
+            <a href="oulist.html">OU List</a>
+            <a href="course_form.html">Course Form</a>
+            <a href="http://guna-sripuram.byethost7.com" target="_blank">Portfolio</a>
+        </div>
+    </div>
+    <br>
+    <div class="content-container">
+    <h1 style="align-content: center;">TIME TABLE</h1>
+    <table style="background-color: yellow;color: red;font: 13px;font-weight: bold;" border="2px">    
+        <tr>
+				
+        <th>100</th>	
+        <th>200</th>
+        <th>300</th>
+        
+        
+        
+    </tr>	
+    <tr>
+				
+        <th rowspan="2">500</th>	
+        <td>600</td>
+        <th>700</th>
+        <th>800</th>
+        
+        
+    </tr>	
+    <tr>
+				
+        	
+        <th>1000</th>
+        <th>1100</th>
+        <th>1200</th>
+        
+        
+    </tr>	
+   </table >
+   <ol type="disc" >
+        <li>100</li>
+        <li>200</li>
+        <li>300</li>
+   </ol >
+   <un circletype ="">
+        <li>1000</li>
+        <li>2000</li>
+        <li>3000</li>
+    </un>
+</br>
+
+    <un type="disc">
+      <li>1000</li>
+        <li>
+            <ol type="disc" >
+            <li>100</li>
+            <li>200</li>
+            <li>300</li>
+            </ol >
+        </li>
+        <li>3000</li>
+    </un>
+</div>
+</body>
+</html>

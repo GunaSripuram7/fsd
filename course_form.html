@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment Form</title>
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1a237e;
+            padding: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-gif {
+            width: 8vw;
+            height: 8vh;
+            margin-left: 1vw;
+            object-fit: contain;
+            max-width: 100%;
+        }
+
+        .nav-menu {
+            margin-left: 0.5%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: white;
+            margin: 4px 8px;
+            padding: 6px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 80px;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 5px;
+            }
+            .logo-gif {
+                width: 15vw;
+                height: 15vh;
+            }
+            .nav-menu {
+                justify-content: center;
+                gap: 5px;
+            }
+            .header a {
+                font-size: 0.8rem;
+                margin: 2px 4px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="logo.gif" alt="Logo" class="logo-gif">
+            <div class="nav-menu">
+                <a href="../index.html">Home</a> 
+                <a href="../timetable.html">Timetable</a> 
+                <a href="../imagegallery.html">Image Gallery</a> 
+                <a href="../oulist.html">OU List</a>
+                <a href="./course_form.html">Course Form</a>
+                <a href="http://guna-sripuram.byethost7.com" target="_blank">Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+
+    <h2>Course Enrollment Form</h2>
+    <form>
+        <table border="0" cellspacing="0" cellpadding="5">
+            <tr>
+                <td><label>Student Name (As per SSC):</label></td>
+                <td><input type="text" name="student_name" required></td>
+            </tr>
+            <tr>
+                <td><label>EAMCET Hall Ticket Number:</label></td>
+                <td><input type="text" name="eamcet_hall_ticket" required></td>
+            </tr>
+            <tr>
+                <td><label>Father's Name:</label></td>
+                <td><input type="text" name="father_name" required></td>
+            </tr>
+            <tr>
+                <td><label>Mother's Name:</label></td>
+                <td><input type="text" name="mother_name" required></td>
+            </tr>
+            <tr>
+                <td><label>Occupation of Mother:</label></td>
+                <td><input type="text" name="mother_occupation" required></td>
+            </tr>
+            <tr>
+                <td><label>Occupation of Father:</label></td>
+                <td><input type="text" name="father_occupation" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="m" required> Male
+                    <input type="radio" name="gender" value="f" required> Female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Date of Birth:</label></td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label>Phone Number (+91 default):</label></td>
+                <td><input type="text" name="phone" pattern="\+91[0-9]{10}" placeholder="+911234567890" maxlength="13" required></td>
+            </tr>
+            <tr>
+                <td><label>Email ID:</label></td>
+                <td><input type="text" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label>Caste:</label></td>
+                <td>
+                    <select name="caste" required>
+                        <option value="">Select Caste</option>
+                        <option value="OC">OC</option>
+                        <option value="BC-A">BC-A</option>
+                        <option value="BC-B">BC-B</option>
+                        <option value="BC-C">BC-C</option>
+                        <option value="BC-D">BC-D</option>
+                        <option value="BC-E">BC-E</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address (Postal):</label></td>
+                <td><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <td><label>EAMCET Rank:</label></td>
+                <td><input type="text" name="eamcet_rank" required></td>
+            </tr>
+            <tr>
+                <td><label>Pin Code:</label></td>
+                <td><input type="text" name="pin_code" pattern="[0-9]{6}" placeholder="123456" required></td>
+            </tr>
+            <tr>
+                <td><label>Select Interested Departments:</label></td>
+                <td>
+                    <input type="checkbox" name="department" value="CSE"> CSE<br>
+                    <input type="checkbox" name="department" value="Civil"> Civil<br>
+                    <input type="checkbox" name="department" value="ECE"> ECE<br>
+                    <input type="checkbox" name="department" value="EEE"> EEE<br>
+                    <input type="checkbox" name="department" value="Mechanical"> Mechanical<br>
+                    <input type="checkbox" name="department" value="IT"> Information Technology
+                </td>
+            </tr>
+            
+            <tr>
+                
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
